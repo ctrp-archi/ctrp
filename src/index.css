@@ -1,0 +1,165 @@
+@font-face {
+  font-family: 'Isocpeur';
+  src: url('/fonts/isocpeur.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-heading: 'Isocpeur', 'Georgia', 'Times New Roman', serif;
+    --font-body: 'Calibri', 'Lato', 'Source Sans Pro', system-ui, -apple-system, sans-serif;
+    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    font-family: var(--font-body);
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+  }
+  
+  /* Titres et éléments principaux avec IsoCopper */
+  h1, h2, h3, h4, h5, h6, 
+  .font-display,
+  button,
+  .btn,
+  nav a,
+  .nav-link,
+  .menu-item,
+  .cta-text,
+  .button-text,
+  .header-nav,
+  .footer-nav,
+  .category-button,
+  .project-code,
+  .project-title,
+  .section-label,
+  .uppercase-label,
+  .tracking-wider {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+  
+  h1 {
+    font-weight: 300;
+    letter-spacing: -0.03em;
+  }
+  
+  /* Boutons et éléments interactifs avec IsoCopper */
+  button, .btn, .button {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+  }
+  
+  /* Navigation avec IsoCopper */
+  nav, .nav, .navigation {
+    font-family: var(--font-heading);
+  }
+  
+  /* Labels et textes en majuscules avec IsoCopper */
+  .uppercase, .tracking-wider, .section-label {
+    font-family: var(--font-heading);
+    font-weight: 500;
+  }
+}
+
+/* FULL NOIR OVERRIDE */
+body {
+  background: #000 !important;
+  color: #fff !important;
+}
+.bg-dark-950, .bg-dark-900, .bg-dark-950\/95, .bg-dark-900\/50, .bg-dark-800, .from-dark-900, .from-dark-950, .to-dark-950, .to-dark-900 {
+  background: #000 !important;
+}
+.border-dark-800, .border-dark-800\/50, .border-dark-800\/30 {
+  border-color: #222 !important;
+}
+.text-accent-400 {
+  color: #aaa !important;
+}
+.text-accent-500 {
+  color: #fff !important;
+}
+.bg-accent-500\/10 {
+  background: #111 !important;
+}
+.bg-white\/60, .bg-white {
+  background: #222 !important;
+}
+.text-dark-950 {
+  color: #fff !important;
+}
+.hover\:bg-white:hover, .hover\:text-dark-950:hover {
+  background: #222 !important;
+  color: #fff !important;
+}
+
+/* TYPOGRAPHIE UNIFORME */
+
+/* Titre principal (H1) - ex: "Architecte" */
+.title-main, h1 {
+  font-family: 'Isocpeur', 'Georgia', 'Times New Roman', serif;
+  font-size: 3rem; /* text-4xl */
+  font-weight: 300;
+  line-height: 1.1;
+}
+@media (min-width: 768px) {
+  .title-main, h1 {
+    font-size: 4.5rem; /* md:text-7xl */
+  }
+}
+@media (min-width: 1024px) {
+  .title-main, h1 {
+    font-size: 6rem; /* lg:text-8xl */
+  }
+}
+
+/* Sous-titre (H2) - ex: "Projets" */
+.title-section, h2 {
+  font-family: 'Isocpeur', 'Georgia', 'Times New Roman', serif;
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 300;
+  line-height: 1.1;
+}
+@media (min-width: 768px) {
+  .title-section, h2 {
+    font-size: 3rem; /* md:text-5xl */
+  }
+}
+@media (min-width: 1024px) {
+  .title-section, h2 {
+    font-size: 3.75rem; /* lg:text-6xl */
+  }
+}
+
+/* Titre de contenu (H3 + header) - ex: "NOTRE APPROCHE" et navigation */
+.title-content, h3, header * {
+  font-family: 'Isocpeur', 'Georgia', 'Times New Roman', serif;
+  font-size: 1rem; /* text-sm */
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+/* Texte de base (body) */
+.text-body, p {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 300;
+  line-height: 1.6;
+}
