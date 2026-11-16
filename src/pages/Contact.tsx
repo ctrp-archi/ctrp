@@ -368,8 +368,6 @@ const Contact = () => {
                   </a>
                   <a 
                     href="mailto:ct@ctrp.pt"
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="hover:opacity-80 transition-opacity duration-300"
                   >
                     <img 
