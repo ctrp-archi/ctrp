@@ -54,12 +54,12 @@ const ProjectDetail = () => {
         <div>
           <div className="max-w-4xl">
             {/* Titre du projet */}
-            <h1 className="font-display font-light text-4xl md:text-6xl lg:text-7xl leading-none text-white mb-4">
+            <h1 className="font-display font-light text-3xl md:text-4xl lg:text-5xl leading-none text-white mb-4">
               {project.title[lang]}
             </h1>
 
             {/* Sous-titre */}
-            <h2 className="font-display text-xl md:text-2xl font-medium text-accent-400 mb-6">
+            <h2 className="font-display text-base md:text-lg font-medium text-accent-400 mb-6">
               {project.intervention[lang]} • {project.category[lang]}
             </h2>
             
