@@ -95,32 +95,38 @@ const Projects = () => {
 
       {/* CONTENU CONDITIONNEL */}
       {displayContent === 'list' && (
-        <section className="py-16 px-8 lg:px-12">
-          <div className="max-w-5xl mx-auto">
+        <section className="py-16">
+          {/* Même largeur que l'en-tête : la 1re colonne part du bord gauche, la dernière finit au bord droit */}
+          <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
             <div className="space-y-1">
-              {filteredProjects.map((project, index) => (
+              {filteredProjects.map((project) => (
                 <Link
                   key={project.id}
                   to={`/projets/${project.id}`}
-                  className="group block py-3 border-b border-dark-800/30 hover:border-accent-400/50 transition-all duration-300"
+                  className="group relative block py-3 border-b border-dark-800/30 hover:border-accent-400/50 transition-all duration-300"
                 >
-                  <div className="flex items-center justify-between">
-                    <div className="flex-1 grid grid-cols-4 gap-8 text-sm">
-                      <div className="font-display font-medium text-white group-hover:text-accent-400 transition-colors duration-300">
-                        {project.title[lang]}
-                      </div>
-                      <div className="text-accent-400 group-hover:text-white transition-colors duration-300">
-                        {project.location.fullLocation}
-                      </div>
-                      <div className="text-accent-400 group-hover:text-white transition-colors duration-300">
-                        {project.timeline.duration}
-                      </div>
-                      <div className="text-accent-400 group-hover:text-white transition-colors duration-300">
-                        {project.typeTranslated[lang]}
-                      </div>
+                  <div className="grid grid-cols-[4.5rem_1fr] gap-x-4 gap-y-1 text-sm md:grid-cols-[4.5rem_1.5fr_1.4fr_0.8fr_1fr] md:gap-x-8">
+                    <div className="font-display font-medium uppercase text-accent-400 group-hover:text-white transition-colors duration-300">
+                      {project.code}
                     </div>
-                    <ArrowRight className="h-4 w-4 text-accent-400 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 ml-6" />
+                    <div className="font-display font-medium text-white group-hover:text-accent-400 transition-colors duration-300">
+                      {project.title[lang]}
+                    </div>
+                    {/* Mobile : lieu, période et type regroupés sur une ligne */}
+                    <div className="col-start-2 text-accent-400 md:hidden">
+                      {project.location.fullLocation} · {project.timeline.duration} · {project.typeTranslated[lang]}
+                    </div>
+                    <div className="hidden md:block text-accent-400 group-hover:text-white transition-colors duration-300">
+                      {project.location.fullLocation}
+                    </div>
+                    <div className="hidden md:block text-accent-400 group-hover:text-white transition-colors duration-300">
+                      {project.timeline.duration}
+                    </div>
+                    <div className="hidden md:block text-right text-accent-400 group-hover:text-white transition-colors duration-300">
+                      {project.typeTranslated[lang]}
+                    </div>
                   </div>
+                  <ArrowRight className="hidden lg:block absolute -right-7 top-1/2 -translate-y-1/2 h-4 w-4 text-accent-400 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
                 </Link>
               ))}
             </div>
