@@ -78,7 +78,8 @@ export const useTranslation = () => {
       'services.chantier3Desc': 'Verificação da conformidade da execução com os projetos aprovados.',
       'services.chantier3Point1': 'Controlo de conformidade',
       'services.chantier3Point2': 'Controlo de prazos e custos',
-      'services.chantier3Point3': 'Verificação das normas legais'
+      'services.chantier3Point3': 'Verificação das normas legais',
+      'services.notesTitle': 'NOTAS'
     },
     fr: {
       'projects.all': 'TOUS',
@@ -152,7 +153,8 @@ export const useTranslation = () => {
       'services.chantier3Desc': 'Vérification de la conformité de l\'exécution avec les projets approuvés.',
       'services.chantier3Point1': 'Contrôle de conformité',
       'services.chantier3Point2': 'Contrôle des délais et coûts',
-      'services.chantier3Point3': 'Vérification des normes légales'
+      'services.chantier3Point3': 'Vérification des normes légales',
+      'services.notesTitle': 'NOTES'
     },
     en: {
       'projects.all': 'ALL',
@@ -226,7 +228,8 @@ export const useTranslation = () => {
       'services.chantier3Desc': 'Verification of execution compliance with approved projects.',
       'services.chantier3Point1': 'Compliance control',
       'services.chantier3Point2': 'Schedule and cost control',
-      'services.chantier3Point3': 'Legal standards verification'
+      'services.chantier3Point3': 'Legal standards verification',
+      'services.notesTitle': 'NOTES'
     }
   };
 
