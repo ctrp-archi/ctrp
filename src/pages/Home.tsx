@@ -42,9 +42,10 @@ const Home = () => {
   return (
     <div className="bg-dark-950 text-white overflow-hidden">
       {/* Hero Section avec image bannière encadrée + overlay + texte */}
-      <section className="relative min-h-screen bg-dark-950 flex items-center">
-        <div className="max-w-5xl mx-auto w-full px-6 sm:px-8 lg:px-12 py-20">
-          <div className="relative h-[70vh] overflow-hidden flex items-center justify-center">
+      {/* Hauteur calculée pour que la devise et les 6 chiffres clés tiennent dans l'écran sans défiler (desktop) */}
+      <section className="relative bg-dark-950">
+        <div className="max-w-5xl mx-auto w-full px-6 sm:px-8 lg:px-12 pt-24 lg:pt-28">
+          <div className="relative h-[40vh] min-h-[220px] lg:h-[calc(100vh-34rem)] lg:min-h-[200px] overflow-hidden flex items-center justify-center">
             <BannerImage 
               className="w-full h-full"
               intervalMs={6000}
@@ -62,7 +63,7 @@ const Home = () => {
       </section>
 
       {/* DESCRIPTION PRINCIPALE - Juste sous la bannière */}
-      <section className="py-12 px-8 lg:px-12 bg-dark-950 relative" style={{marginTop: '-64px'}}>
+      <section className="py-8 px-8 lg:px-12 bg-dark-950 relative">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-lg md:text-2xl text-accent-400 leading-relaxed">
             {t('home.heroSubtitle')}
@@ -71,42 +72,42 @@ const Home = () => {
       </section>
 
       {/* SECTION CHIFFRES CLÉS */}
-      <section className="py-12 px-8 lg:px-12 bg-dark-900 relative">
+      <section className="py-8 px-8 lg:px-12 bg-dark-900 relative">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-6">
             {/* 12 PROJETS RÉALISÉS */}
             <div className="text-center">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-display font-light text-white mb-2">12</div>
+              <div className="text-3xl md:text-4xl font-display font-light text-white mb-2">12</div>
               <p className="text-sm font-medium text-accent-400 uppercase tracking-wider">{t('home.projectsCompleted')}</p>
             </div>
 
             {/* +30 CONSULTATIONS RÉALISÉES */}
             <div className="text-center">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-display font-light text-white mb-2">+30</div>
+              <div className="text-3xl md:text-4xl font-display font-light text-white mb-2">+30</div>
               <p className="text-sm font-medium text-accent-400 uppercase tracking-wider">{t('home.consultationsCompleted')}</p>
             </div>
 
             {/* +25 ANNÉES D'EXPÉRIENCE */}
             <div className="text-center">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-display font-light text-white mb-2">+25</div>
+              <div className="text-3xl md:text-4xl font-display font-light text-white mb-2">+25</div>
               <p className="text-sm font-medium text-accent-400 uppercase tracking-wider">{t('home.yearsExperience')}</p>
             </div>
 
             {/* 3 CONSULTATIONS EN COURS */}
             <div className="text-center">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-display font-light text-white mb-2">3</div>
+              <div className="text-3xl md:text-4xl font-display font-light text-white mb-2">3</div>
               <p className="text-sm font-medium text-accent-400 uppercase tracking-wider">{t('home.consultationsInProgress')}</p>
             </div>
 
             {/* 1 PROJET EN COURS */}
             <div className="text-center">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-display font-light text-white mb-2">1</div>
+              <div className="text-3xl md:text-4xl font-display font-light text-white mb-2">1</div>
               <p className="text-sm font-medium text-accent-400 uppercase tracking-wider">{t('home.projectsInProgress')}</p>
             </div>
 
             {/* 7 CHANTIERS EN COURS */}
             <div className="text-center">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-display font-light text-white mb-2">7</div>
+              <div className="text-3xl md:text-4xl font-display font-light text-white mb-2">7</div>
               <p className="text-sm font-medium text-accent-400 uppercase tracking-wider">{t('home.constructionSites')}</p>
             </div>
           </div>
