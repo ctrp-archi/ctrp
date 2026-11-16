@@ -28,7 +28,7 @@ const About = () => {
       {/* PHILOSOPHIE - Baseline percutante */}
       <section className="py-16 px-8 lg:px-12 bg-dark-950 relative" style={{marginTop: '-64px'}}>
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-xl md:text-3xl text-white font-light leading-relaxed italic">{t('about.philosophy')}</p>
+          <p className="text-xl md:text-3xl text-white font-light leading-relaxed">{t('about.philosophy')}</p>
           <p className="text-lg md:text-xl text-accent-400 mt-6 leading-relaxed">{t('about.vision')}</p>
         </div>
       </section>
@@ -71,7 +71,7 @@ const About = () => {
 
           {/* Message rentabilité */}
           <div className="mt-16 text-center">
-            <p className="text-lg text-accent-300 max-w-2xl mx-auto border-l-2 border-accent-500 pl-6 text-left italic">{t('about.investmentValue')}</p>
+            <p className="text-lg text-accent-300 max-w-2xl mx-auto border-l-2 border-accent-500 pl-6 text-left">{t('about.investmentValue')}</p>
           </div>
         </div>
       </section>
