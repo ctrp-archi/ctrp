@@ -175,8 +175,8 @@ const Services = () => {
       </section>
 
       {/* Accordéons Services */}
-      <section className="py-12 px-6 lg:px-12 bg-dark-950">
-        <div className="max-w-4xl mx-auto">
+      <section className="py-12 bg-dark-950">
+        <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="space-y-4">
             {serviceSections.map((section) => (
               <div
