@@ -349,8 +349,8 @@ const Contact = () => {
                     className="hover:opacity-80 transition-opacity duration-300"
                   >
                     <img 
-                      src="/images/google-logo.svg" 
-                      alt="Google Maps - Voir l'adresse sur Google Maps" 
+                      src="/images/google-contacts-logo.svg" 
+                      alt="Google - Voir l'adresse sur Google Maps" 
                       className="h-6 w-6 object-contain"
                     />
                   </a>
