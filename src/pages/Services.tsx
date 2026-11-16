@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ChevronDown, MessageCircle, FileText, HardHat } from 'lucide-react';
 import BannerImage from '../components/BannerImage';
+import ServiceSubItem from '../components/ServiceSubItem';
 import { useTranslation } from '../hooks/useTranslation';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -28,8 +29,17 @@ const Services = () => {
   const { language } = useLanguage();
   const [openSection, setOpenSection] = useState<string | null>(null);
 
+  // Sous-niveaux ouverts (1.1, 1.2…) : chacun s'ouvre et se referme séparément.
+  const [openItems, setOpenItems] = useState<string[]>([]);
+
   const toggleSection = (id: string) => {
     setOpenSection(openSection === id ? null : id);
+  };
+
+  const toggleItem = (key: string) => {
+    setOpenItems((current) =>
+      current.includes(key) ? current.filter((k) => k !== key) : [...current, key]
+    );
   };
 
   const getNavPath = () => {
@@ -189,6 +199,9 @@ const Services = () => {
               >
                 {/* En-tête accordéon */}
                 <button
+                  type="button"
+                  aria-expanded={openSection === section.id}
+                  aria-controls={`service-${section.id}-contenu`}
                   onClick={() => toggleSection(section.id)}
                   className="w-full px-6 py-6 flex items-center justify-between bg-dark-900/50 hover:bg-dark-800/50 transition-colors duration-300"
                 >
@@ -214,48 +227,35 @@ const Services = () => {
 
                 {/* Contenu accordéon */}
                 <div
+                  id={`service-${section.id}-contenu`}
+                  aria-hidden={openSection !== section.id}
                   className={`overflow-hidden transition-all duration-500 ease-in-out ${
                     openSection === section.id ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
                   }`}
                 >
                   <div className="px-6 py-8 bg-dark-950 border-t border-dark-800">
-                    <div className="space-y-8">
-                      {section.items.map((item, index) => (
-                        <div
-                          key={index}
-                          className="pl-6 border-l-2 border-accent-500/30 hover:border-accent-500 transition-colors duration-300"
-                        >
-                          <h3 className="font-display text-lg font-medium text-white mb-2">
-                            {section.number}.{index + 1} {item.title}
-                          </h3>
-                          <p className="text-accent-400 leading-relaxed mb-4">
-                            {item.description}
-                          </p>
-                          {item.points && (
-                            <ul className="space-y-2">
-                              {item.points.map((point, pointIndex) => (
-                                <li
-                                  key={pointIndex}
-                                  className="flex items-start text-sm text-accent-400"
-                                >
-                                  <span className="w-1.5 h-1.5 bg-accent-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                  {point}
-                                </li>
-                              ))}
-                            </ul>
-                          )}
-                        </div>
-                      ))}
-                      {section.notes && (
-                        <div className="pl-6 border-l-2 border-accent-500/30">
-                          <h3 className="font-display text-lg font-medium text-white mb-2">
-                            {section.number}.{section.items.length + 1} {t('services.notesTitle')}
-                          </h3>
-                          <p className="text-sm text-accent-400 leading-relaxed">
-                            {section.notes}
-                          </p>
-                        </div>
-                      )}
+                    <div className="space-y-4">
+                      {/* La rubrique NOTES, quand son texte existe, est un sous-niveau comme les autres (Pastel n° 19) */}
+                      {[
+                        ...section.items,
+                        ...(section.notes
+                          ? [{ title: t('services.notesTitle'), description: section.notes }]
+                          : []),
+                      ].map((item: ServiceItem, index) => {
+                        const key = `service-${section.id}-${index + 1}`;
+                        return (
+                          <ServiceSubItem
+                            key={key}
+                            id={key}
+                            label={`${section.number}.${index + 1} ${item.title}`}
+                            description={item.description}
+                            points={item.points}
+                            isOpen={openItems.includes(key)}
+                            isReachable={openSection === section.id}
+                            onToggle={() => toggleItem(key)}
+                          />
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
