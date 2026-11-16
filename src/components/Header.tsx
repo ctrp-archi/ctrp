@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Instagram, Facebook, Linkedin } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Header = () => {
@@ -130,7 +130,7 @@ const Header = () => {
                 className="text-accent-400 hover:text-white transition-colors duration-300"
                 aria-label="Seguir CTRP no Instagram"
               >
-                <img src="/images/instagram-new.svg?v=3" alt="Instagram" className="h-5 w-5 object-contain" />
+                <Instagram className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
               </a>
               <a
                 href="https://www.facebook.com/ctrp.arquitetos/"
@@ -139,7 +139,7 @@ const Header = () => {
                 className="text-accent-400 hover:text-white transition-colors duration-300"
                 aria-label="Seguir CTRP no Facebook"
               >
-                <img src="/images/facebook-new.svg?v=2" alt="Facebook" className="h-5 w-5 object-contain" />
+                <Facebook className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
               </a>
               <a
                 href="https://www.linkedin.com/company/ctrparquitetos/"
@@ -148,7 +148,7 @@ const Header = () => {
                 className="text-accent-400 hover:text-white transition-colors duration-300"
                 aria-label="Seguir CTRP no LinkedIn"
               >
-                <img src="/images/linkedin-new.svg?v=1" alt="LinkedIn" className="h-5 w-5 object-contain" />
+                <Linkedin className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
               </a>
             </div>
 
@@ -241,24 +241,27 @@ const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-accent-400 hover:text-white transition-colors duration-300"
+                aria-label="Seguir CTRP no Instagram"
               >
-                <img src="/images/instagram-new.svg?v=3" alt="Instagram" className="h-5 w-5 object-contain" />
+                <Instagram className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
               </a>
               <a
                 href="https://www.facebook.com/ctrp.arquitetos/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-accent-400 hover:text-white transition-colors duration-300"
+                aria-label="Seguir CTRP no Facebook"
               >
-                <img src="/images/facebook-new.svg?v=2" alt="Facebook" className="h-5 w-5 object-contain" />
+                <Facebook className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
               </a>
               <a
                 href="https://www.linkedin.com/company/ctrparquitetos/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-accent-400 hover:text-white transition-colors duration-300"
+                aria-label="Seguir CTRP no LinkedIn"
               >
-                <img src="/images/linkedin-new.svg?v=1" alt="LinkedIn" className="h-5 w-5 object-contain" />
+                <Linkedin className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
               </a>
             </div>
             
