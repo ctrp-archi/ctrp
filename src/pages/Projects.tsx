@@ -58,18 +58,18 @@ const Projects = () => {
     <div className="bg-dark-950 text-white min-h-screen">
       
       {/* SECOND HEADER - Menu horizontal des catégories */}
-      <section className="pt-20 lg:pt-24 pb-5 px-8 lg:px-12">
-        {/* Container aligné sur la grille de projets */}
+      <section className="pt-20 lg:pt-24 pb-5">
+        {/* Container aligné sur l'en-tête et sur la grille de projets */}
         <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="flex justify-between items-center">
             {/* Espace vide pour aligner avec le logo */}
-            <div className="flex items-center">
+            <div className="hidden lg:flex items-center">
               <div className="h-11 lg:h-14 w-auto"></div>
             </div>
             
             {/* Navigation horizontale des catégories - Alignement identique au header */}
-            <div className="flex items-center space-x-8">
-            {categories.map((category, index) => (
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 lg:gap-x-8">
+            {categories.map((category) => (
               <button
                 key={category.key}
                 onClick={() => setSelectedCategory(category.key)}
@@ -129,9 +129,9 @@ const Projects = () => {
       )}
 
       {(displayContent === 'default-grid' || displayContent === 'filtered-grid') && (
-        <section className="py-1 px-8 lg:px-12">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-3 gap-[24px]" style={{ transform: 'scale(0.85)', transformOrigin: 'top center' }}>
+        <section className="pt-1 pb-16">
+          <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div className="grid grid-cols-3 gap-[24px]">
               {filteredProjects.map((project) => (
                 <Link
                   key={project.id}
