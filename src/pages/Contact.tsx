@@ -309,10 +309,15 @@ const Contact = () => {
                 
                 <div className="flex items-start space-x-6">
                   <MapPin className="h-6 w-6 text-accent-500 mt-1" />
-                  <div className="font-display text-accent-400 text-lg leading-relaxed">
-                    <p>Rua Cristóvão Figueiredo 11B</p>
-                    <p>1600-049 Lisboa, Portugal</p>
-                  </div>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Rua+Crist%C3%B3v%C3%A3o+Figueiredo+11B%2C+1600-049+Lisboa%2C+Portugal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-display block text-accent-400 hover:text-white transition-colors duration-300 text-lg leading-relaxed"
+                  >
+                    <span className="block">Rua Cristóvão Figueiredo 11B</span>
+                    <span className="block">1600-049 Lisboa, Portugal</span>
+                  </a>
                 </div>
 
                 {/* QR Code ALIGNÉ avec les pictogrammes */}
