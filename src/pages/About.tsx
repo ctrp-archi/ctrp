@@ -42,8 +42,8 @@ const About = () => {
 
           <div className="grid md:grid-cols-3 gap-12">
             {/* Expérience */}
-            <div className="text-center group">
-              <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center border border-accent-500/30 group-hover:border-accent-400 transition-colors duration-300">
+            <div className="group">
+              <div className="w-16 h-16 mb-6 flex items-center justify-center border border-accent-500/30 group-hover:border-accent-400 transition-colors duration-300">
                 <Clock className="h-8 w-8 text-accent-500" />
               </div>
               <h3 className="font-display text-xl font-medium mb-4 text-white">{t('about.experience')}</h3>
@@ -51,8 +51,8 @@ const About = () => {
             </div>
 
             {/* Flexibilité */}
-            <div className="text-center group">
-              <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center border border-accent-500/30 group-hover:border-accent-400 transition-colors duration-300">
+            <div className="group">
+              <div className="w-16 h-16 mb-6 flex items-center justify-center border border-accent-500/30 group-hover:border-accent-400 transition-colors duration-300">
                 <Compass className="h-8 w-8 text-accent-500" />
               </div>
               <h3 className="font-display text-xl font-medium mb-4 text-white">{t('about.flexibility')}</h3>
@@ -60,8 +60,8 @@ const About = () => {
             </div>
 
             {/* Accompagnement */}
-            <div className="text-center group">
-              <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center border border-accent-500/30 group-hover:border-accent-400 transition-colors duration-300">
+            <div className="group">
+              <div className="w-16 h-16 mb-6 flex items-center justify-center border border-accent-500/30 group-hover:border-accent-400 transition-colors duration-300">
                 <Users className="h-8 w-8 text-accent-500" />
               </div>
               <h3 className="font-display text-xl font-medium mb-4 text-white">{t('about.support')}</h3>
