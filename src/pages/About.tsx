@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, Award, MapPin, ArrowRight, Clock, Compass, Users } from 'lucide-react';
+import { Calendar, Award, MapPin, ArrowRight, Clock, Users } from 'lucide-react';
 import BannerImage from '../components/BannerImage';
+import DirectionsIcon from '../components/DirectionsIcon';
 import { useTranslation } from '../hooks/useTranslation';
 
 const About = () => {
@@ -53,7 +54,7 @@ const About = () => {
             {/* Flexibilité */}
             <div className="group">
               <div className="w-16 h-16 mb-6 flex items-center justify-center border border-accent-500/30 group-hover:border-accent-400 transition-colors duration-300">
-                <Compass className="h-8 w-8 text-accent-500" />
+                <DirectionsIcon className="h-8 w-8 text-accent-500" />
               </div>
               <h3 className="font-display text-xl font-medium mb-4 text-white">{t('about.flexibility')}</h3>
               <p className="text-accent-400 leading-relaxed">{t('about.flexibilityText')}</p>
