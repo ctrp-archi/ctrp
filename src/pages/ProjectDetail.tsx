@@ -35,8 +35,8 @@ const ProjectDetail = () => {
       
       {/* BLOC 1 - Image Hero (largeur complète) */}
       <section className="pt-20 lg:pt-24">
-        <div className="px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div>
             <div className="w-full">
               <img
                 src={heroImage}
@@ -50,8 +50,8 @@ const ProjectDetail = () => {
       </section>
 
       {/* BLOC 2 - Zone de texte complète (écart vertical A/3) */}
-      <section className="px-6 lg:px-8" style={{ marginTop: 'calc(100vw / 45)' }}>
-        <div className="max-w-7xl mx-auto">
+      <section className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12" style={{ marginTop: 'calc(100vw / 45)' }}>
+        <div>
           <div className="max-w-4xl">
             {/* Titre du projet */}
             <h1 className="font-display font-light text-4xl md:text-6xl lg:text-7xl leading-none text-white mb-4">
@@ -115,8 +115,8 @@ const ProjectDetail = () => {
 
       {/* GALERIE - Toutes les images en format bandeau */}
       {project.images.gallery.map((image, index) => (
-        <section key={index} className="px-6 lg:px-8" style={{ marginTop: 'calc(100vw / 45)' }}>
-          <div className="max-w-7xl mx-auto">
+        <section key={index} className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12" style={{ marginTop: 'calc(100vw / 45)' }}>
+          <div>
             <div className="w-full">
               <img
                 src={image}
@@ -130,8 +130,8 @@ const ProjectDetail = () => {
       ))}
 
       {/* CTA et Navigation */}
-      <section className="px-6 lg:px-8 py-20">
-        <div className="max-w-7xl mx-auto">
+      <section className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 py-20">
+        <div>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-8">
             {/* Bouton retour */}
             <Link 
