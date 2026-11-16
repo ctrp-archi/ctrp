@@ -178,8 +178,9 @@ const Services = () => {
       </section>
 
       {/* Accordéons Services */}
-      <section className="py-12 bg-dark-950">
-        <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
+      {/* Même largeur que le texte d'introduction au-dessus (max-w-3xl) */}
+      <section className="py-12 px-8 lg:px-12 bg-dark-950">
+        <div className="max-w-3xl mx-auto">
           <div className="space-y-4">
             {serviceSections.map((section) => (
               <div
