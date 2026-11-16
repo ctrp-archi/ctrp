@@ -18,6 +18,9 @@ interface ServiceSection {
   subtitle: string;
   icon: React.ReactNode;
   items: ServiceItem[];
+  // Sous-titre « NOTES » (avertissement) affiché après les points x.1, x.2, x.3.
+  // Vide tant que le client n'a pas fourni le texte (Pastel n° 19).
+  notes?: string;
 }
 
 const Services = () => {
@@ -242,6 +245,16 @@ const Services = () => {
                           )}
                         </div>
                       ))}
+                      {section.notes && (
+                        <div className="pl-6 border-l-2 border-accent-500/30">
+                          <h3 className="font-display text-lg font-medium text-white mb-2">
+                            {section.number}.{section.items.length + 1} {t('services.notesTitle')}
+                          </h3>
+                          <p className="text-sm text-accent-400 leading-relaxed">
+                            {section.notes}
+                          </p>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
