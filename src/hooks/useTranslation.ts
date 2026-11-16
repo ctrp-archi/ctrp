@@ -353,7 +353,7 @@ export const useTranslation = () => {
     pt: {
       'contact.heroLabel': 'CONTACTO',
       'contact.heroTitle': 'Contacto',
-      'contact.heroSubtitle': 'Entre em contacto connosco para discutir o seu projeto. Oferecemos uma primeira consulta gratuita.',
+      'contact.heroSubtitle': 'Entre em contacto connosco para discutir o seu projeto. Como podemos ajudá-lo?',
       'contact.formLabel': 'FORMULÁRIO DE CONTACTO',
       'contact.informationLabel': 'INFORMAÇÕES DE CONTACTO',
       'contact.name': 'Nome',
@@ -388,7 +388,7 @@ export const useTranslation = () => {
     fr: {
       'contact.heroLabel': 'CONTACT',
       'contact.heroTitle': 'Contact',
-      'contact.heroSubtitle': 'Contactez-nous pour discuter de votre projet. Nous offrons une première consultation gratuite.',
+      'contact.heroSubtitle': 'Contactez-nous pour discuter de votre projet. Comment pouvons-nous vous aider ?',
       'contact.formLabel': 'FORMULAIRE DE CONTACT',
       'contact.informationLabel': 'INFORMATIONS DE CONTACT',
       'contact.name': 'Nom',
@@ -423,7 +423,7 @@ export const useTranslation = () => {
     en: {
       'contact.heroLabel': 'CONTACT',
       'contact.heroTitle': 'Contact',
-      'contact.heroSubtitle': 'Contact us to discuss your project. We offer a free initial consultation.',
+      'contact.heroSubtitle': 'Contact us to discuss your project. How can we help you?',
       'contact.formLabel': 'CONTACT FORM',
       'contact.informationLabel': 'CONTACT INFORMATION',
       'contact.name': 'Name',
